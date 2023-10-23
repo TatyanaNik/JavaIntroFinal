@@ -34,7 +34,7 @@ class PhoneBook {
         phoneBook.entrySet().stream().sorted(new Comparator<Map.Entry<String, ArrayList<Integer>>>() {
             @Override
             public int compare(Map.Entry<String, ArrayList<Integer>> o1, Map.Entry<String, ArrayList<Integer>> o2) {
-                return o1.getValue().size() - o2.getValue().size();
+                return o2.getValue().size() - o1.getValue().size();
             }
         }
         ).forEach(e -> System.out.println(e.getKey() +": " + e.getValue()));
